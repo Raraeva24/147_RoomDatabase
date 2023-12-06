@@ -22,6 +22,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -39,7 +40,6 @@ import com.example.a147_roomdatabase.navigasi.DestinasiNavigasi
 import com.example.a147_roomdatabase.navigasi.SiswaTopAppBar
 
 object DestinasiHome: DestinasiNavigasi {
-    object DestinasiHome: DestinasiNavigasi {
         override val route = "home"
         override val titleRes = R.string.app_name
     }
@@ -165,4 +165,3 @@ object DestinasiHome: DestinasiNavigasi {
             }
         }
     }
-}
