@@ -27,6 +27,7 @@ import com.example.a147_roomdatabase.R
 import com.example.a147_roomdatabase.model.DetailSiswa
 import com.example.a147_roomdatabase.model.EntryViewModel
 import com.example.a147_roomdatabase.model.PenyediaViewModel
+import com.example.a147_roomdatabase.model.UIStateSiswa
 import com.example.a147_roomdatabase.navigasi.DestinasiNavigasi
 import com.example.a147_roomdatabase.navigasi.SiswaTopAppBar
 import kotlinx.coroutines.launch
@@ -41,7 +42,7 @@ object DestinasiEntry: DestinasiNavigasi {
 fun EntrySiswaScreen(
     navigateBack: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: EntryViewModel = viewModel(factory = PenyediaViewModel.factory)
+    viewModel: EntryViewModel = viewModel(factory = PenyediaViewModel.Factory)
 ){
     val coroutineScope = rememberCoroutineScope()
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
@@ -106,14 +107,14 @@ fun FormInputSiswa(
     modifier: Modifier = Modifier,
     onValueChange: (DetailSiswa) -> Unit = {},
     enabled: Boolean = true
-){
+) {
     Column(
         modifier = modifier,
         verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.padding_medium))
-    ){
+    ) {
         OutlinedTextField(
             value = detailSiswa.nama,
-            onValueChange = {onValueChange(detailSiswa.copy(nama=it))},
+            onValueChange = { onValueChange(detailSiswa.copy(nama = it)) },
             label = { Text(stringResource(id = R.string.nama)) },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
@@ -121,7 +122,7 @@ fun FormInputSiswa(
         )
         OutlinedTextField(
             value = detailSiswa.alamat,
-            onValueChange = {onValueChange(detailSiswa.copy(alamat=it))},
+            onValueChange = { onValueChange(detailSiswa.copy(alamat = it)) },
             label = { Text(stringResource(id = R.string.alamat)) },
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
@@ -129,14 +130,14 @@ fun FormInputSiswa(
         )
         OutlinedTextField(
             value = detailSiswa.telpon,
-            onValueChange = {onValueChange(detailSiswa.copy(telpon=it))},
+            onValueChange = { onValueChange(detailSiswa.copy(telpon = it)) },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
             modifier = Modifier.fillMaxWidth(),
             enabled = enabled,
             singleLine = true
         )
 
-        if (enabled){
+        if (enabled) {
             Text(
                 text = stringResource(id = R.string.required_field),
                 modifier = Modifier.padding(start = dimensionResource(id = R.dimen.padding_medium))
@@ -147,3 +148,4 @@ fun FormInputSiswa(
             modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.padding_medium))
         )
     }
+}
