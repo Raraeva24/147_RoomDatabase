@@ -18,8 +18,8 @@ import androidx.navigation.compose.rememberNavController
 import com.example.a147_roomdatabase.R
 import com.example.a147_roomdatabase.ui.halaman.DestinasiEntry
 import com.example.a147_roomdatabase.ui.halaman.DestinasiHome
-import com.example.a147_roomdatabase.ui.halaman.DestinasiHome.HomeScreen
 import com.example.a147_roomdatabase.ui.halaman.EntrySiswaScreen
+import com.example.a147_roomdatabase.ui.halaman.HomeScreen
 
 @Composable
 fun SiswaApp(navController: NavHostController = rememberNavController()){

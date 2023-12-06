@@ -22,6 +22,7 @@ import androidx.compose.ui.input.nestedscroll.nestedScroll
 import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.a147_roomdatabase.R
 import com.example.a147_roomdatabase.model.DetailSiswa
@@ -29,6 +30,7 @@ import com.example.a147_roomdatabase.model.EntryViewModel
 import com.example.a147_roomdatabase.model.PenyediaViewModel
 import com.example.a147_roomdatabase.model.UIStateSiswa
 import com.example.a147_roomdatabase.navigasi.DestinasiNavigasi
+import com.example.a147_roomdatabase.navigasi.SiswaApp
 import com.example.a147_roomdatabase.navigasi.SiswaTopAppBar
 import kotlinx.coroutines.launch
 

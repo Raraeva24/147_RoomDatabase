@@ -3,7 +3,7 @@ package com.example.a147_roomdatabase.data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "tableSiswa")
+@Entity(tableName = "tblSiswa")
 data class Siswa(
     @PrimaryKey(autoGenerate = true)
     //srtiap entitas ada primarykey, cara bacanya dia baca baris bawah setelha dia, nanti jadi primary key, ini autogenerate makanya dia true
