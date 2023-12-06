@@ -49,7 +49,7 @@ object DestinasiHome: DestinasiNavigasi {
     fun HomeScreen(
         navigateToItemEntry: () -> Unit,
         modifier: Modifier = Modifier,
-        viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.Factory)
+        viewModel: HomeViewModel = viewModel(factory = PenyediaViewModel.factory)
     ) {
         val coroutineScope = rememberCoroutineScope()
         val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()
