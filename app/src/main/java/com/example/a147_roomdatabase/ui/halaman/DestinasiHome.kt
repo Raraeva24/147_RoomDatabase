@@ -31,13 +31,13 @@ import androidx.compose.ui.res.dimensionResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.a147_roomdatabase.R
 import com.example.a147_roomdatabase.data.Siswa
 import com.example.a147_roomdatabase.model.HomeViewModel
 import com.example.a147_roomdatabase.model.PenyediaViewModel
 import com.example.a147_roomdatabase.navigasi.DestinasiNavigasi
 import com.example.a147_roomdatabase.navigasi.SiswaTopAppBar
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 object DestinasiHome: DestinasiNavigasi {
         override val route = "home"
