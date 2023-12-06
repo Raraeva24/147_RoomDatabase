@@ -28,6 +28,7 @@ import com.example.a147_roomdatabase.model.DetailSiswa
 import com.example.a147_roomdatabase.model.EntryViewModel
 import com.example.a147_roomdatabase.model.PenyediaViewModel
 import com.example.a147_roomdatabase.navigasi.DestinasiNavigasi
+import com.example.a147_roomdatabase.navigasi.SiswaTopAppBar
 import kotlinx.coroutines.launch
 
 object DestinasiEntry: DestinasiNavigasi {
@@ -40,7 +41,7 @@ object DestinasiEntry: DestinasiNavigasi {
 fun EntrySiswaScreen(
     navigateBack: () -> Unit,
     modifier: Modifier = Modifier,
-    viewModel: EntryViewModel = viewModel(factory = PenyediaViewModel.Factory)
+    viewModel: EntryViewModel = viewModel(factory = PenyediaViewModel.factory)
 ){
     val coroutineScope = rememberCoroutineScope()
     val scrollBehavior = TopAppBarDefaults.enterAlwaysScrollBehavior()

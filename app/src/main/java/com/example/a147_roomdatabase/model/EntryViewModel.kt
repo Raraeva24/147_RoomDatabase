@@ -8,8 +8,6 @@ import com.example.a147_roomdatabase.data.Siswa
 import com.example.a147_roomdatabase.repositori.RepositoriSiswa
 
 class EntryViewModel (private val repositoriSiswa: RepositoriSiswa): ViewModel() {
-
-
     var uiStateSiswa by mutableStateOf(UIStateSiswa())
     private set
 
@@ -30,6 +28,10 @@ class EntryViewModel (private val repositoriSiswa: RepositoriSiswa): ViewModel()
     }
 }
 
+data class UIStateSiswa(
+    val detailSiswa: DetailSiswa = DetailSiswa(),
+    val isEntryValid: Boolean = false
+)
 data class DetailSiswa(
     val id: Int = 0,
     val nama: String = "",
